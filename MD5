@@ -1,0 +1,8 @@
+08c1e0305bf59fe4377d449f8d0a70e6 *DESCRIPTION
+35f2ce3863f31a39f43f227ccee20c46 *NAMESPACE
+a6e189a44f47d33a5d7094edadaf206b *R/MplusTrees.R
+3ece92b936ade4870faac3bfc5dd534c *R/plot.mplustree.R
+b0f3e051bceb85967f10dbc1a916f715 *R/summary.mplustree.R
+2fc1aa0d8a1d0f80823c6962489dad5f *man/MplusTrees.Rd
+cb3a23305424fd9e65df5f4a1fded924 *man/plot.mplustree.Rd
+c04c248a636af0d8635ea8eef0ad4d06 *man/summary.mplustree.Rd
