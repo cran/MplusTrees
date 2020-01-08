@@ -1,7 +1,7 @@
 Package: MplusTrees
 Type: Package
 Title: Decision Trees with Structural Equation Models Fit in 'Mplus'
-Version: 0.0.1
+Version: 0.1.1
 Author: Sarfaraz Serang [aut,cre],
         Ross Jacobucci [aut,cre],
         Kevin J. Grimm [ctb],
@@ -19,6 +19,6 @@ Encoding: UTF-8
 RoxygenNote: 6.1.1
 LazyData: true
 NeedsCompilation: no
-Packaged: 2019-07-18 20:41:03 UTC; Sarfaraz
+Packaged: 2019-12-30 05:51:20 UTC; Sarfaraz
 Repository: CRAN
-Date/Publication: 2019-07-19 09:50:02 UTC
+Date/Publication: 2020-01-08 09:50:02 UTC
