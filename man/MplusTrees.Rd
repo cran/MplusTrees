@@ -4,9 +4,19 @@
 \alias{MplusTrees}
 \title{Recursive partitioning trees with Mplus models}
 \usage{
-MplusTrees(script, data, rPartFormula, catvars = NULL, group = ~id,
-  control = rpart.control(), se = F, psplit = F, palpha = 0.05,
-  cv = F, k = 5)
+MplusTrees(
+  script,
+  data,
+  rPartFormula,
+  catvars = NULL,
+  group = ~id,
+  control = rpart.control(),
+  se = F,
+  psplit = F,
+  palpha = 0.05,
+  cv = F,
+  k = 5
+)
 }
 \arguments{
 \item{script}{An \code{MplusAutomation} script file}
@@ -55,18 +65,18 @@ to the \code{cp} criterion in that both must be met for a split to be made. The 
 turns this option on, and \code{palpha} sets the alpha level criterion for rejection.
 
 Cross-validation (CV) can also be used to choose the \code{cp} parameter. If this option is used, any
-user-specified \code{cp} value will be overridden by the optimal \code{cp} value chosen by CV. CV fits 
+user-specified \code{cp} value will be overridden by the optimal \code{cp} value chosen by CV. CV fits
 the model to the training set and calculates an expected minus 2 log-likelihood (-2LL) for each terminal
 node. In the test set, individuals are assigned to terminal nodes based on the tree structure found in
-the training set. Their "expected" values are the -2LL values from the respective training set terminal 
+the training set. Their "expected" values are the -2LL values from the respective training set terminal
 nodes. The "observed" values are the -2LL values from fitting a multiple group model, with each terminal
 node as a group. The \code{cp} value chosen is the one that produces the smallest MSE.
 
-CV should only be used when (1) the M\emph{plus} model can be fit relatively quickly, (2) there are only 
-a few covariates with a few response options, and (3) the sample size is large enough that the user is 
-confident the model can be fit without issue in a sample of size \emph{N/k} and a tree that partitions 
-this sample further. If these conditions are not met, the process could take prohibitively long to arrive 
-at a solution. Note that if even a single model fails to produce a valid log-likelihood value, the 
+CV should only be used when (1) the M\emph{plus} model can be fit relatively quickly, (2) there are only
+a few covariates with a few response options, and (3) the sample size is large enough that the user is
+confident the model can be fit without issue in a sample of size \emph{N/k} and a tree that partitions
+this sample further. If these conditions are not met, the process could take prohibitively long to arrive
+at a solution. Note that if even a single model fails to produce a valid log-likelihood value, the
 function will terminate with an error.
 }
 \examples{
@@ -85,6 +95,10 @@ fit = MplusTrees(script, HolzingerSwineford1939, group=~id,
 
 fit
 }
+}
+\references{
+Serang, S., Jacobucci, R., Stegmann, G., Brandmaier, A. M., Culianos, D., & Grimm, K. J. (2021).
+Mplus Trees: Structural equation model trees using Mplus. Structural Equation Modeling, 28, 127-137.
 }
 \author{
 Ross Jacobucci and Sarfaraz Serang
